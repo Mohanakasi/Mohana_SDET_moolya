@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="41abfa36-405f-4a4b-92fd-9656b124c363" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ajio_submission/Testbase/selenium_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/ajio_submission/Testbase/selenium_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajio_submission/page_home/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/ajio_submission/page_home/pages/home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajio_submission/page_home/utilities/excel_read_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/ajio_submission/page_home/utilities/excel_read_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajio_submission/tests/test_home_page_menu_validations.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2XrBJZo9KToaBWDMQoDXjh7BxyM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/SDET/Python selenium projects"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41abfa36-405f-4a4b-92fd-9656b124c363" name="Changes" comment="" />
+      <created>1699377246942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699377246942</updated>
+    </task>
+    <servers />
+  </component>
+</project>
