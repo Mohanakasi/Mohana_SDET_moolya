@@ -5,9 +5,6 @@ import json
 class Rest_api_methods:
     base_url = ''
 
-    # def pay_load_convert_json(self, body):
-    #     pay_load = json.dumps(body)
-    #     return pay_load
 
     def get_request(self, end_point, authentication=''):
         if not authentication:
@@ -33,15 +30,18 @@ class Rest_api_methods:
     def delete_request(self, end_point, authentication=''):
         Acc_token = {'Authorization': 'Bearer ' + authentication}
         response = requests.delete(self.base_url+end_point, headers=Acc_token)
+        return response
 
 
-    def json_data_retrieving(self, file_name):
+    def json_data_reading(self, file_name):
         with open(fr"{file_name}", 'r') as json_file2:
             data = json.load(json_file2)
             return data
 
-    def json_tets_data_returning(self, file_name, data):
+
+    def json_tets_data_writing(self, file_name, data):
         with open(fr"{file_name}", 'w') as json_file1:
             json.dump(data, json_file1)
+
 
 

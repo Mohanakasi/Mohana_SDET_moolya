@@ -1,46 +1,47 @@
-from practice_11_11.API_frame_work.request_methods.api_methods import Rest_api_methods
+import random
+
+from Python_API_frame_work.request_methods.api_methods import Rest_api_methods
 from random import randint
 class Test_Simple_books(Rest_api_methods):
     Rest_api_methods.base_url = r'https://simple-books-api.glitch.me'
-    json_test_file = r"C:\Kasi_python_moolya\practice_11_11\API_frame_work\Data_retrieve\test_data.json"
+    END_payload_file = r"../json_files/pay_load_file.json"
+    test_data_file = r"../json_files/test_data.json"
+
     def test_getting_access_token(self):
-        body = {
-           "clientName": "Postman",
-           "clientEmail": f"kasimohana{randint(1000,1218)}robo@gmail.com"
-        }
-        token_data = self.post_requests(r"/api-clients/", body)
-        self.json_tets_data_returning(self.json_test_file,token_data.json())
+        data_dict = self.json_data_reading(self.END_payload_file)
+        data_dict[1]["Gen_token_body"].update(clientEmail=f'kasimohana{randint(1900,2100)}robo@gmail.com')
+        token_data = self.post_requests(data_dict[0]["Gen_token_END_POINT"], data_dict[1]["Gen_token_body"])
+        self.json_tets_data_writing(self.test_data_file,token_data.json())
+        print(token_data.json())
+        assert token_data.status_code == 201
 
     def test_create_order(self):
-        body = {
-          "bookId": 4,
-          "customerName": "Kasi's History"
-        }
-        json_file_data = self.json_data_retrieving(self.json_test_file)
-        response = self.post_requests(r"/orders/", body, json_file_data['accessToken'])
-        json_file_data.update(id=response.json()['orderId'])
-        self.json_tets_data_returning(self.json_test_file, json_file_data)
+        acc_token = self.json_data_reading(self.test_data_file)
+        End_point = self.json_data_reading(self.END_payload_file)[0]["Create_order_END_POINT"]
+        body = self.json_data_reading(self.END_payload_file)[1]["create_order_body"]
+        response = self.post_requests(End_point, body, acc_token['accessToken'])
+        acc_token.update(id=response.json()['orderId'])
+        self.json_tets_data_writing(self.test_data_file, acc_token)
         print(response.json())
+        assert response.status_code == 201
 
     def test_get_book(self):
-        order_id = self.json_data_retrieving(self.json_test_file)['id']
-        end_point = fr"/orders/{order_id}"
-        json_file_data = self.json_data_retrieving(self.json_test_file)
-        res = self.get_request(end_point, json_file_data['accessToken'])
+        order_details = self.json_data_reading(self.test_data_file)
+        end_point = self.json_data_reading(self.END_payload_file)[0]["Get_order_END_POINT"]+str(order_details['id'])
+        res = self.get_request(end_point, order_details['accessToken'])
         print(res.json())
-        return res
+        assert res.status_code == 200
 
+    #
     def test_deleting_a_book(self):
-        json_file_data = self.json_data_retrieving(self.json_test_file)
-        order_id = self.json_data_retrieving(self.json_test_file)['id']
-        end_point = fr"/orders/{order_id}"
-        response = self.delete_request(end_point, json_file_data['accessToken'])
-        print(response)
-        print(self.test_get_book())
+        order_details = self.json_data_reading(self.test_data_file)
+        end_point = self.json_data_reading(self.END_payload_file)[0]["Get_order_END_POINT"] + str(order_details['id'])
+        response = self.delete_request(end_point, order_details['accessToken'])
+        assert response.status_code == 204
 
-#
-# a = Test_Simple_books()
-# a.test_getting_access_token()
-# a.test_create_order()
-# a.test_get_book()
-# a.test_deleting_a_book()
+
+run1 = Test_Simple_books()
+run1.test_getting_access_token()
+run1.test_create_order()
+run1.test_get_book()
+run1.test_deleting_a_book()
