@@ -1,0 +1,1 @@
+[{"Gen_token_END_POINT": "/api-clients/", "Create_order_END_POINT": "/orders/", "Get_order_END_POINT": "/orders/"}, {"Gen_token_body": {"clientName": "Postman", "clientEmail": "kasimohana1505@gmail.com"}, "create_order_body": {"bookId": 4, "customerName": "Kasi's History"}}]
