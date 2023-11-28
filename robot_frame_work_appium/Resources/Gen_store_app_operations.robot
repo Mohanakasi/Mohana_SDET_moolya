@@ -1,14 +1,15 @@
 *** Settings ***
-Resource    ./gen_resource.robot
+Resource    ./Gen_store_resource.robot
 
 *** Keywords ***
 Clicking country drop down
     wait until page contains element    ${county_drop_down}     15s
     click element       ${county_drop_down}
 
+
 Selecting desired country from the drop down
     sleep    5s
-    ${i}    Evaluate    1
+    ${i}    Evaluate    1       #i=1
     WHILE    ${i}>0
         ${LIST_ELEMENTS}    get webelements    ${country_items}
         ${LIST_LENGTH}    get length        ${LIST_ELEMENTS}
@@ -36,10 +37,12 @@ Click on proceed to shop button
 Selecting a shoe from the shoes item page & adding to cart
    ${i}    Evaluate    1
     WHILE    ${i}>0
+      sleep     4s
       ${LIST_ELEMENTS}    get webelements    ${shoe_items_list}
       FOR    ${elem}      IN      @{LIST_ELEMENTS}
         ${shoe}      get element attribute    ${elem}    text
         IF      "${shoe}" == ${Shoe_name}
+            sleep    4s
             click element       ${add_to_cart_shoe}
             ${i}   evaluate    ${i}-1
             BREAK
