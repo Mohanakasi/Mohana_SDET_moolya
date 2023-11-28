@@ -1,6 +1,7 @@
 *** Settings ***
 Resource   ../Resources/Gen_store_resource.robot
 Test Setup    Opening the general app application
+Test Teardown    Closing the general store application
 
 *** Test Cases ***
 Adding a shoe to the cart & proceed to checkout page
