@@ -1,6 +1,6 @@
 import random
 
-from request_methods.api_methods import Rest_api_methods
+from Python_API_frame_work_DD.request_methods.api_methods import Rest_api_methods
 from random import randint
 class Test_Simple_books_class(Rest_api_methods):
     Rest_api_methods.base_url = r'https://simple-books-api.glitch.me'
