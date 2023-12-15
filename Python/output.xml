@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231204 13:43:05.171" rpa="false" schemaversion="4">
+<suite id="s1" name="Test 2" source="C:\SDET\Python\test_2.robot">
+<test id="s1-t1" name="this is sample test case ${a} ${b}" line="10">
+<status status="FAIL" starttime="20231204 13:43:05.631" endtime="20231204 13:43:05.633">Test cannot be empty.</status>
+</test>
+<status status="FAIL" starttime="20231204 13:43:05.172" endtime="20231204 13:43:05.635"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test 2">Test 2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231204 13:43:05.622" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\SDET\Python\test_2.robot", line 0</msg>
+<msg timestamp="20231204 13:43:05.622" level="ERROR">In source file:
+  File "C:SDETPython	emp1.csv", line 0</msg>
+<msg timestamp="20231204 13:43:05.628" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\SDET\Python\SDETPython	emp1.csv but file does not exist.</msg>
+</errors>
+</robot>

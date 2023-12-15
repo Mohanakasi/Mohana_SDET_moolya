@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="485ae59b-a2b5-4fbb-b8c8-45a7bd4f9891" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Python/abstraction_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python/temp1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python/test_2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python/trial1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/pages/intro_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/selenium_methods/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/selenium_methods/appium_sel_methods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practice_appium/tests/test_ixigo_sample.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/deco_practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/msedgedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/pages/bank_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/results/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/sel_methods/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/sel_methods/bank_sel_methods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../py_selenium_7_12/tests/test_bank_operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pytest_learning/trial1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject23/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject23/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject23/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject23/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject23/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2ZLOb7PQZeCnnZGiskNcul5gNIS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="485ae59b-a2b5-4fbb-b8c8-45a7bd4f9891" name="Changes" comment="" />
+      <created>1702197962034</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702197962034</updated>
+    </task>
+    <servers />
+  </component>
+</project>
