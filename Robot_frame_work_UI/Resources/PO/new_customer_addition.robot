@@ -17,4 +17,5 @@ Select gender radio button
 check the promos check box
     Select Checkbox    name=promos-name
 click on subit button
+    sleep    6s
     Click Button    xpath=//button[text()='Submit']

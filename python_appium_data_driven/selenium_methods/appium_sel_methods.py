@@ -1,5 +1,7 @@
 import time
 from datetime import datetime
+
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.expected_conditions import visibility_of_element_located, element_to_be_clickable
 from python_appium_data_driven.Data_setup.excel_read import locators_fetch_from_excel
@@ -23,9 +25,9 @@ def wait_deco(func):
 
 
 class appium_wrapper:
-    def __init__(self, driver, excel_sheet_path, sheet_name, column1, coloumn2):
+    def __init__(self, driver):
         self.driver = driver
-        locators_fetch_from_excel(excel_sheet_path, sheet_name, column1, coloumn2)
+
 
     @wait_deco
     def finding_an_element(self, locator):
@@ -43,6 +45,11 @@ class appium_wrapper:
     def entering_text_into_text_field(self, locator, value):
         self.driver.find_element(*locator).send_keys(value)
 
+    @wait_deco
+    def tap_on_element(self, element_xpah):
+        actions = TouchAction(self.driver)
+        element = self.finding_an_element(element_xpah)
+        actions.tap(element).perform()
 
     def page_screen_shot_capture(self, path,s_shot_name):
         time.sleep(4)
