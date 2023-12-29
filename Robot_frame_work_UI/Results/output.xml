@@ -1,21 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231124 13:19:58.222" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231215 12:34:06.929" rpa="false" schemaversion="4">
+<suite id="s1" name="Script1" source="C:\SDET\Robot_frame_work_UI\Tests\script1.robot">
+<kw name="begin web test" library="common_app" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231215 12:34:07.308" endtime="20231215 12:34:07.308"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>7s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231215 12:34:07.308" endtime="20231215 12:34:07.308"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 12:34:07.308" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<status status="PASS" starttime="20231215 12:34:07.308" endtime="20231215 12:34:11.134"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 12:34:11.134" endtime="20231215 12:34:11.471"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:07.308" endtime="20231215 12:34:11.471"/>
+</kw>
+<test id="s1-t1" name="Should able to click sign in link and navigate to login page" line="15">
+<kw name="login_validation" library="crm_app">
+<kw name="click on sign in link" library="login_page">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>SignIn</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:11.473" level="INFO">Clicking link 'SignIn'.</msg>
+<status status="PASS" starttime="20231215 12:34:11.473" endtime="20231215 12:34:12.700"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231215 12:34:13.134" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20231215 12:34:12.700" endtime="20231215 12:34:13.134"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:11.473" endtime="20231215 12:34:13.134"/>
+</kw>
+<kw name="Enter email id" library="login_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email-id</arg>
+<arg>kasi.jmr@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:13.136" level="INFO">Typing text 'kasi.jmr@gmail.com' into text field 'id=email-id'.</msg>
+<status status="PASS" starttime="20231215 12:34:13.134" endtime="20231215 12:34:14.052"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:13.134" endtime="20231215 12:34:14.052"/>
+</kw>
+<kw name="Enter password" library="login_page">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>12345</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:14.055" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20231215 12:34:14.551" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231215 12:34:14.912" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231215 12:34:14.052" endtime="20231215 12:34:14.912"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:14.052" endtime="20231215 12:34:14.912"/>
+</kw>
+<kw name="Enter password" library="login_page">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>12345</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:14.914" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20231215 12:34:15.398" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231215 12:34:15.747" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231215 12:34:14.914" endtime="20231215 12:34:15.747"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:14.912" endtime="20231215 12:34:15.747"/>
+</kw>
+<kw name="click on submit button" library="login_page">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231215 12:34:16.134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231215 12:34:15.747" endtime="20231215 12:34:16.134"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:16.138" level="INFO">Clicking button 'id=submit-id'.</msg>
+<status status="PASS" starttime="20231215 12:34:16.137" endtime="20231215 12:34:17.578"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${LOGIN_SEARCH_TERM}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231215 12:34:18.054" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
+<status status="PASS" starttime="20231215 12:34:17.578" endtime="20231215 12:34:18.054"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:15.747" endtime="20231215 12:34:18.054"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:11.471" endtime="20231215 12:34:18.054"/>
+</kw>
+<doc>sign-link</doc>
+<tag>Sign-in</tag>
+<status status="PASS" starttime="20231215 12:34:11.471" endtime="20231215 12:34:18.054"/>
+</test>
+<test id="s1-t2" name="Should able to click on new customer link" line="20">
+<kw name="checking new customer button" library="crm_app">
+<kw name="click on new customer button" library="login_page">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>id=new-customer</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:18.057" level="INFO">Clicking link 'id=new-customer'.</msg>
+<status status="PASS" starttime="20231215 12:34:18.057" endtime="20231215 12:34:19.358"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:18.057" endtime="20231215 12:34:19.358"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:18.057" endtime="20231215 12:34:19.358"/>
+</kw>
+<doc>new_cutomer button validation</doc>
+<tag>new_customer</tag>
+<status status="PASS" starttime="20231215 12:34:18.054" endtime="20231215 12:34:19.358"/>
+</test>
+<test id="s1-t3" name="Should able add the data of new customer" line="25">
+<kw name="Filling new customer details" library="crm_app">
+<kw name="Enter email id" library="new_customer_addition">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=EmailAddress</arg>
+<arg>kasi.jmr@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:19.360" level="INFO">Typing text 'kasi.jmr@gmail.com' into text field 'id=EmailAddress'.</msg>
+<status status="PASS" starttime="20231215 12:34:19.360" endtime="20231215 12:34:20.283"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:19.360" endtime="20231215 12:34:20.283"/>
+</kw>
+<kw name="Enter first name" library="new_customer_addition">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=FirstName</arg>
+<arg>Mohana Kasi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:20.283" level="INFO">Typing text 'Mohana Kasi' into text field 'id=FirstName'.</msg>
+<status status="PASS" starttime="20231215 12:34:20.283" endtime="20231215 12:34:21.168"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:20.283" endtime="20231215 12:34:21.168"/>
+</kw>
+<kw name="Enter last name" library="new_customer_addition">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=LastName</arg>
+<arg>Settipalli</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:21.168" level="INFO">Typing text 'Settipalli' into text field 'id=LastName'.</msg>
+<status status="PASS" starttime="20231215 12:34:21.168" endtime="20231215 12:34:22.044"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:21.168" endtime="20231215 12:34:22.044"/>
+</kw>
+<kw name="Enter city" library="new_customer_addition">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=City</arg>
+<arg>Guntur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:22.044" level="INFO">Typing text 'Guntur' into text field 'id=City'.</msg>
+<status status="PASS" starttime="20231215 12:34:22.044" endtime="20231215 12:34:22.891"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:22.044" endtime="20231215 12:34:22.891"/>
+</kw>
+<kw name="Enter state" library="new_customer_addition">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>id=StateOrRegion</arg>
+<arg>AL</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231215 12:34:22.891" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value AL.</msg>
+<status status="PASS" starttime="20231215 12:34:22.891" endtime="20231215 12:34:24.688"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:22.891" endtime="20231215 12:34:24.688"/>
+</kw>
+<kw name="Select gender radio button" library="new_customer_addition">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>gender</arg>
+<arg>male</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20231215 12:34:24.688" level="INFO">Selecting 'male' from radio button 'gender'.</msg>
+<status status="PASS" starttime="20231215 12:34:24.688" endtime="20231215 12:34:25.418"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:24.688" endtime="20231215 12:34:25.418"/>
+</kw>
+<kw name="check the promos check box" library="new_customer_addition">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>name=promos-name</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:25.419" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
+<status status="PASS" starttime="20231215 12:34:25.418" endtime="20231215 12:34:26.581"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:25.418" endtime="20231215 12:34:26.581"/>
+</kw>
+<kw name="click on subit button" library="new_customer_addition">
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 12:34:32.581" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20231215 12:34:26.581" endtime="20231215 12:34:32.581"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[text()='Submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 12:34:32.581" level="INFO">Clicking button 'xpath=//button[text()='Submit']'.</msg>
+<msg timestamp="20231215 12:34:34.975" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231215 12:34:34.975" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (563, 590)
+  (Session info: chrome=120.0.6099.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1CA4D02+56194]
+	(No symbol) [0x00007FF7E1C104B2]
+	(No symbol) [0x00007FF7E1AB76AA]
+	(No symbol) [0x00007FF7E1B08763]
+	(No symbol) [0x00007FF7E1B0675D]
+	(No symbol) [0x00007FF7E1B03F5C]
+	(No symbol) [0x00007FF7E1B02D15]
+	(No symbol) [0x00007FF7E1AF687F]
+	(No symbol) [0x00007FF7E1B25E7A]
+	(No symbol) [0x00007FF7E1AF6226]
+	(No symbol) [0x00007FF7E1B26320]
+	(No symbol) [0x00007FF7E1B42786]
+	(No symbol) [0x00007FF7E1B25C23]
+	(No symbol) [0x00007FF7E1AF4A45]
+	(No symbol) [0x00007FF7E1AF5AD4]
+	GetHandleVerifier [0x00007FF7E201D5BB+3695675]
+	GetHandleVerifier [0x00007FF7E2076197+4059159]
+	GetHandleVerifier [0x00007FF7E206DF63+4025827]
+	GetHandleVerifier [0x00007FF7E1D3F029+687785]
+	(No symbol) [0x00007FF7E1C1B508]
+	(No symbol) [0x00007FF7E1C17564]
+	(No symbol) [0x00007FF7E1C176E9]
+	(No symbol) [0x00007FF7E1C08094]
+	BaseThreadInitThunk [0x00007FFEDF17257D+29]
+	RtlUserThreadStart [0x00007FFEE07CAA58+40]
+</msg>
+<status status="FAIL" starttime="20231215 12:34:32.581" endtime="20231215 12:34:34.984"/>
+</kw>
+<status status="FAIL" starttime="20231215 12:34:26.581" endtime="20231215 12:34:34.984"/>
+</kw>
+<status status="FAIL" starttime="20231215 12:34:19.360" endtime="20231215 12:34:34.984"/>
+</kw>
+<doc>adding new customer</doc>
+<tag>new_customer_data</tag>
+<status status="FAIL" starttime="20231215 12:34:19.360" endtime="20231215 12:34:34.984">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (563, 590)
+  (Session info: chrome=120.0.6099.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E1CA4D02+56194]
+	(No symbol) [0x00007FF7E1C104B2]
+	(No symbol) [0x00007FF7E1AB76AA]
+	(No symbol) [0x00007FF7E1B08763]
+	(No symbol) [0x00007FF7E1B0675D]
+	(No symbol) [0x00007FF7E1B03F5C]
+	(No symbol) [0x00007FF7E1B02D15]
+	(No symbol) [0x00007FF7E1AF687F]
+	(No symbol) [0x00007FF7E1B25E7A]
+	(No symbol) [0x00007FF7E1AF6226]
+	(No symbol) [0x00007FF7E1B26320]
+	(No symbol) [0x00007FF7E1B42786]
+	(No symbol) [0x00007FF7E1B25C23]
+	(No symbol) [0x00007FF7E1AF4A45]
+	(No symbol) [0x00007FF7E1AF5AD4]
+	GetHandleVerifier [0x00007FF7E201D5BB+3695675]
+	GetHandleVerifier [0x00007FF7E2076197+4059159]
+	GetHandleVerifier [0x00007FF7E206DF63+4025827]
+	GetHandleVerifier [0x00007FF7E1D3F029+687785]
+	(No symbol) [0x00007FF7E1C1B508]
+	(No symbol) [0x00007FF7E1C17564]
+	(No symbol) [0x00007FF7E1C176E9]
+	(No symbol) [0x00007FF7E1C08094]
+	BaseThreadInitThunk [0x00007FFEDF17257D+29]
+	RtlUserThreadStart [0x00007FFEE07CAA58+40]
+</status>
+</test>
+<kw name="close web test" library="common_app" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231215 12:34:34.984" endtime="20231215 12:34:37.429"/>
+</kw>
+<status status="PASS" starttime="20231215 12:34:34.984" endtime="20231215 12:34:37.429"/>
+</kw>
+<doc>Trial suitr</doc>
+<status status="FAIL" starttime="20231215 12:34:06.929" endtime="20231215 12:34:37.429"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">new_customer</stat>
+<stat pass="0" fail="1" skip="0">new_customer_data</stat>
+<stat pass="1" fail="0" skip="0">Sign-in</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Script1">Script1</stat>
+</suite>
+</statistics>
 <errors>
-<msg timestamp="20231124 13:19:58.253" level="ERROR">Importing library 'robot.libraries.BuiltIn' failed: SyntaxError: invalid syntax (BuiltIn.py, line 1389)
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\python312.zip
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\DLLs
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib
-  C:\Users\USER\AppData\Local\Programs\Python\Python312
-  C:\Users\USER\AppData\Roaming\Python\Python312\site-packages
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\win32\lib
-  C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\Pythonwin
-
-Try --help for usage information.</msg>
 </errors>
 </robot>
