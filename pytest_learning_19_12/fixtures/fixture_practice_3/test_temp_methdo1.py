@@ -13,7 +13,7 @@ class Test_class_temp:
 class Test_class_2:
 
     @pytest.mark.class_2_methods
-    def test_methdod1(self, demo_fixture1, demo_fixture_2):
+    def file_methdod1(self, demo_fixture1, demo_fixture_2):
         print("method of class 2")
 
 

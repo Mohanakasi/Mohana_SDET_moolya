@@ -10,36 +10,31 @@ class Rest_api_methods:
     def get_request(self, end_point_key, authentication_key='', Extra_path=''):
         if not authentication_key:
             json_EP_data  = self.json_data_reading(self.END_payload_file)
-            response = requests.get(self.base_url+json_EP_data[end_point_key]+Extra_path)
-            return response
+            return requests.get(self.base_url+json_EP_data[end_point_key]+Extra_path)
         elif authentication_key:
             json_EP_data = self.json_data_reading(self.END_payload_file)
             json_test_data = self.json_data_reading(self.test_data_file_path)
             Acc_token = {'Authorization': 'Bearer ' + json_test_data[authentication_key]}
-            response = requests.get(self.base_url+json_EP_data[0][end_point_key]+Extra_path, headers=Acc_token)
-            return response
+            return requests.get(self.base_url+json_EP_data[0][end_point_key]+Extra_path, headers=Acc_token)
 
 
     def post_requests(self, end_point_key, body_key, authentication_key='', extra_path=''):
         if not authentication_key:
             json_EP_body_data = self.json_data_reading(self.END_payload_file)
-            response = requests.post(self.base_url+json_EP_body_data[0][end_point_key]+extra_path,json=json_EP_body_data[1][body_key])
-            return response
+            return requests.post(self.base_url+json_EP_body_data[0][end_point_key]+extra_path,json=json_EP_body_data[1][body_key])
 
         elif authentication_key:
             json_test_data = self.json_data_reading(file_name=self.test_data_file_path)
             Acc_token = {'Authorization': 'Bearer ' + json_test_data[authentication_key]}
             json_EP_body_data = self.json_data_reading(self.END_payload_file)
-            response = requests.post(self.base_url+json_EP_body_data[0][end_point_key]+extra_path,json=json_EP_body_data[1][body_key], headers=Acc_token)
-            return response
+            return requests.post(self.base_url+json_EP_body_data[0][end_point_key]+extra_path,json=json_EP_body_data[1][body_key], headers=Acc_token)
 
 
     def delete_request(self, end_point_key, authentication_key='',extra_path=''):
         json_EP_data = self.json_data_reading(self.END_payload_file)
         json_test_data = self.json_data_reading(self.test_data_file_path)
         Acc_token = {'Authorization': 'Bearer ' + json_test_data[authentication_key]}
-        response = requests.delete(self.base_url+json_EP_data[0][end_point_key]+extra_path, headers=Acc_token)
-        return response
+        return requests.delete(self.base_url+json_EP_data[0][end_point_key]+extra_path, headers=Acc_token)
 
     def extra_path_parametrization(self, test_data_file, key):
            res = self.json_data_reading(test_data_file)
@@ -57,8 +52,7 @@ class Rest_api_methods:
 
     def json_data_reading(self, file_name):
         with open(fr"{file_name}", 'r') as json_file2:
-            data = json.load(json_file2)
-            return data
+            return json.load(json_file2)
 
 
     def json_data_writing(self, file_name, data, new_data_key='', value = ''):
